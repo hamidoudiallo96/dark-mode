@@ -5,10 +5,13 @@ import axios from "axios";
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 
+
 import "./styles.scss";
+
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
+
 
   useEffect(() => {
     axios
@@ -20,7 +23,7 @@ const App = () => {
   }, []);
   return (
     <div className="App">
-      <Navbar />
+      <Navbar  />
       <Charts coinData={coinData} />
     </div>
   );
